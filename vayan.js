@@ -1,1 +1,1 @@
-const vasyan = "pidoras";
+const lexa = "NE pidoras";
