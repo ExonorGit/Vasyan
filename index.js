@@ -19,7 +19,7 @@ console.log(null - undefined);
 console.log(10 - undefined);
 
 let vasyan = "Vasyan";
-let isVasyanWon = undefined;
+let isVasyanWon = null;
 
 if (isVasyanWon) {
   vasyan = vasyan + string2;
