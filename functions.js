@@ -42,7 +42,7 @@ const res = sum();
 
 console.log(sum()); // 7
 
-console.log(sum1()); // error
+//console.log(sum1()); // error
 
 const sum1 = () => {
   //стрелочная функция, синтаксис ES6
@@ -53,3 +53,31 @@ const sum1 = () => {
 };
 
 console.log(sum1());
+
+function calculate(a = 15, b = 10, operation = "addition") {
+  if (operation === "divide") {
+    return a / b;
+  }
+  if (operation === "addition") {
+    return a + b;
+  }
+  if (operation === "subtraction") {
+    return a - b;
+  }
+  if (operation === "multiplication") {
+    return a * b;
+  }
+  return null;
+  //Параметры: a -первое число, b - второе число, operation - операция в виде строки (Деление,умножение,вычитание,сложение)
+}
+console.log(calculate(30, 20, ""));
+const calcRef = calculate; //Ссылка на функцию
+
+function pow(init, power, number = init) {
+  if (power === 1) {
+    return number;
+  }
+  number *= init;
+  return pow(init, --power, number);
+}
+console.log(pow(5, 10));

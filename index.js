@@ -29,3 +29,10 @@ if (isVasyanWon) {
   vasyan = vasyan + vasyan;
 }
 console.log(vasyan);
+const pivo = num1 * num2;
+console.log(pivo);
+function square(x) {
+  return x * x;
+}
+var demo = square(3);
+console.log(square);
