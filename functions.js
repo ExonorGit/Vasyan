@@ -81,3 +81,29 @@ function pow(init, power, number = init) {
   return pow(init, --power, number);
 }
 console.log(pow(5, 10));
+
+function sin(x, termCount) {
+  //termCount КОЛИЧЕСТВО СЛОГАЕМЫХ
+  let isPlus = true;
+  let result = x;
+  let power = 1;
+  for (let i = 0; i < termCount; i++) {
+    if (isPlus) {
+      result += pow(x, power) / getFactorial(power);
+    } else {
+      result -= pow(x, power) / getFactorial(power);
+    }
+    isPlus = !isPlus;
+    power = power + 2;
+  }
+  return result;
+}
+function getFactorial(number) {
+  let result = 1;
+  while (number > 1) {
+    result = result * number;
+    --number;
+  }
+  return result;
+}
+console.log(sin(0.2, 2));
